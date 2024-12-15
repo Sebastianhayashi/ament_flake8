@@ -4,6 +4,7 @@
 %global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
 %global __provides_exclude_from ^/opt/ros/jazzy/.*$
 %global __requires_exclude_from ^/opt/ros/jazzy/.*$
+%global debug_package %{nil}
 
 Name:           ros-jazzy-ament-flake8
 Version:        0.17.1
