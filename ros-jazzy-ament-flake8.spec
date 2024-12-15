@@ -21,6 +21,7 @@ Requires:       flake8-quotes
 Requires:       python3-flake8
 Requires:       ros-jazzy-ament-lint
 BuildRequires:  python%{python3_pkgversion}-devel
+BuildRequires:  ros-jazzy-ament-package
 
 %description
 The ability to check code for style and syntax conventions with flake8.
