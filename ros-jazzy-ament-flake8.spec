@@ -4,7 +4,6 @@
 %global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
 %global __provides_exclude_from ^/opt/ros/jazzy/.*$
 %global __requires_exclude_from ^/opt/ros/jazzy/.*$
-%global debug_package %{nil}
 
 Name:           ros-jazzy-ament-flake8
 Version:        0.17.1
@@ -15,10 +14,10 @@ License:        Apache License 2.0
 Source0:        %{name}-%{version}.tar.gz
 
 Requires:       flake8
+Requires:       flake8-comprehensions
 Requires:       flake8-docstrings
 Requires:       flake8-import-order
 Requires:       flake8-quotes
-Requires:       packages:[flake8-comprehensions]
 Requires:       python3-flake8
 Requires:       ros-jazzy-ament-lint
 BuildRequires:  python%{python3_pkgversion}-devel
@@ -70,6 +69,7 @@ fi
 %endif
 
 %files
+%license /opt/ros/jazzy/LICENSE
 /opt/ros/jazzy/*
 
 %changelog
